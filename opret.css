@@ -1,0 +1,180 @@
+* {box-sizing: border-box;}
+
+:root {
+  --foreground: #7e0e00;
+  --background: #F8F5EE;
+  --txt-color:#F8F5EE;
+  --txt-color2:#0D0706;
+  --hover:#d92d20; 
+  --fontbold:"Poppins", sans-serif;
+}
+
+body, html {
+    font-family: var(--fontbold);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+header {
+    background-color: var(--foreground);
+    color: var(--txt-color);
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+.logo h1{
+  padding-left: 15px;
+}
+
+/*mobil*/
+.slideshow-container {
+    display: block; 
+    width: 100%; /* Eller en anden bredde, afhængig af dit layout */
+    margin: 0 auto; /* Centrerer containeren i forhold til viewport */
+    position: relative; /* Nødvendig for at positionere absolutte børneelementer */
+  }
+
+  .image {
+    display: block; /* Gør at margin:auto kan anvendes til centrering */
+    width: 60%; /* Juster denne værdi til ønsket størrelse */
+    margin: 0 auto; /* Centrerer billedet horisontalt */
+    height: auto; /* Bevarer billedets aspektforhold */
+  }
+
+.myfade {
+    position: relative;
+    width: 100%;
+    display: none;
+  }
+
+ .numbertext {
+      color: #fff;
+      font-size: 12px;
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      background-color: rgba(0,0,0,0.5);
+      padding: 8px;
+  }
+
+ .text {
+      position: absolute;
+      bottom: 0;
+      background-color: var(--foreground); /* Mørk, gennemsigtig baggrund */
+      color: var(--txt-color);
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 1.2;
+  }
+
+ .text h1{
+    font-size: 18px;
+  }
+
+ .text p {
+    font-size: 14px;
+  }
+
+ .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 10px 20px;
+      margin-top: -22px; /* Halvdelen af elementets højde for at centrere det */
+      color: var(--foreground);
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      z-index: 100;
+      border-radius: 50%;
+  }
+
+ .prev { left: 10px; }
+   .next { right: 10px; }
+
+ .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.5);
+  }
+
+ .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+  }
+
+.active, .dot:hover {
+      background-color: var(--foreground);
+  }
+
+
+ .button-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.button1, .button2 {
+    padding: 20px 60px;
+    margin: 10px auto;
+    font-size: 16px;
+    border: 5px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--foreground);
+    color: var(--txt-color);
+  }
+  
+.button1:hover, .button2:hover {
+    background-color: var(--txt-color);
+    border-color:#7e0e00;
+    color: var(--txt-color2);
+  }
+
+/*desktop*/
+@media only screen and (min-width: 901px) {
+
+ .logo img {
+    width: 100px;
+    height: auto;
+}
+
+ .image {
+      width: 20%;
+  }
+
+.prev, .next {
+    font-size: 25px;
+}
+
+.button1, .button2 {
+      padding: 10px 250px;
+      font-size: 25px;
+      margin: 0px auto;
+  }
+
+ .text h1{
+    font-size: 25px;
+  }
+
+  .text p {
+    font-size: 18px;
+  } 
+}
