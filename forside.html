@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyrenses SOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="forside.css">
+    <script src="forside.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <label class="hamburger-menu">
+            <input type="checkbox">
+        </label>
+        <aside class="sidebar">
+            <nav>
+                <div><a href="#" class="link">Min Profil</a></div>
+                <div><a href="#" class="link">Opgaver</a></div>
+                <div><a href="#" class="link">Mine Point</a></div>
+                <div><a href="#" class="link">Hændelser</a></div>
+                <div><a href="#" class="link">Kurser</a></div>
+                <div><a href="#" class="link">Førstehjælps kit</a></div>
+                <div><a href="#" class="link">Om os</a></div>
+                <div><a href="#" class="logud">Log ud</a></div>
+            </nav>
+        </aside>
+    </div>
+    
+    <div id="buttons">
+       
+        <button class="btn" onclick="filterObjects('katte')">Katte</button>
+        <button class="btn" onclick="filterObjects('hunde')">Hunde</button>
+        <button class="btn" onclick="filterObjects('kaniner')">Kaniner</button>
+        <button class="btn" onclick="filterObjects('gnavere')">Gnavere</button>
+    </div>
+    
+    <div class="animal">
+        <div class="box show hunde"> <img src="img/pin.png" class="pin" alt="pin fra google maps"></div>
+        <div class="box show gnavere"><img src="img/pin.png" class="pin-2" alt="pin fra Google maps"></div>
+        <div class="box show katte"> <img src="img/pin.png" class="pin-3" alt="pin fra google maps"></div>
+        <div class="box show katte"><img src="img/pin.png"  class="pin-4" alt="pin fra google maps"></div>
+        <div class="box show hunde"><img src="img/pin.png" class="pin-5" alt="pin fra google maps"></div>
+        <div class="box show hunde"><img src="img/pin.png" class="pin-6" alt="pin fra google maps"> </div>
+        <div class="box show katte"><img src="img/pin.png"  class="pin-7" alt="pin fra google maps"></div>
+        <div class="box show kaniner"><img src="img/pin.png"  class="pin-8" alt="pin fra google maps"></div>
+        <div class="box show gnavere"><img src="img/pin.png" class="pin-9" alt="pin fra google maps"></div>
+    </div>
+    
+    <img src="img/map.png" alt="Billede af et kort" class="map">
+    
+
+</body>
+</html>
+
