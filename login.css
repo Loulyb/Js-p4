@@ -1,0 +1,197 @@
+@font-face {
+    font-family: poppins-bold;
+    src: url(fonts/Poppins-Bold.ttf)
+}
+@font-face {
+    font-family: poppins-regular;
+    src: url(fonts/Poppins-Regular.ttf)
+}
+
+body{ 
+    background-color: #FBF9F5;
+    text-align: center;
+    font-family: poppins-regular;
+}
+
+.logo{
+    max-width: 200px;
+    position: relative;
+    margin: 30px auto;
+    display: block; 
+}
+
+h2{
+    font-family: poppins-bold;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.login-knap {
+    color: #FBF9F5;
+    background-color: #F04438;
+    display: inline-block;
+    width: 152px;
+    line-height: 35px;
+    border-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    margin: auto;
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+.divider {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #0D0706;
+    line-height: 0.1em;
+    margin: 40px 0 30px;
+  }
+  
+  .divider-text {
+    background-color: #FBF9F5;
+    padding: 0 10px;
+    color: #0D0706;
+    font-size: 17px;
+  }
+
+  .google-login-btn {
+    background-color: #FFFFFF;
+    color:#0D0706;
+    border: 2px solid #809766;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 15px;
+    width: 245px;
+    padding-right: 36px;
+    font-family: poppins-regular;
+    border-radius: 5px;
+  }
+
+  .google-icon {
+    max-width: 20px;
+    position: relative;
+    vertical-align: bottom;
+    padding-right: 5px;
+  }
+
+  .facebook-login-btn {
+    background-color: #FFFFFF;
+    color:#0D0706;
+    border: 2px solid #809766;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 15px;
+    width: 245px;
+    font-family: poppins-regular;
+    border-radius: 5px;
+  }
+
+  .facebook-icon {
+    max-width: 20px;
+    position: relative;
+    vertical-align: bottom;
+    padding-right: 5px;
+  }
+
+  .create-account {
+    font-size: 14px;
+  }
+
+  .create-account-link {
+    font-weight: bold;
+    color: #0D0706;
+  }
+
+  @media only screen and (min-width: 1440px) {
+
+    .logo{
+        max-width: 350px;
+        position: relative;
+        margin: 30px auto;
+        display: block; 
+    }
+
+    h2{
+        font-family: poppins-bold;
+        text-align: center;
+        font-size: 40px;
+        padding-bottom: 20px;
+    }
+
+    .login-knap {
+        color: #FBF9F5;
+        background-color: #F04438;
+        display: inline-block;
+        width: 250px;
+        line-height: 50px;
+        border-style: none;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .divider {
+        width: 65%;
+        text-align: center;
+        border-bottom: 1px solid #0D0706;
+        line-height: 0.1em;
+        margin: 50px auto 30px;
+      }
+      
+      .divider-text {
+        background-color: #FBF9F5;
+        padding: 0 10px;
+        color: #0D0706;
+        font-size: 20px;
+      }
+
+      .google-login-btn {
+        background-color: #FFFFFF;
+        color:#0D0706;
+        border: 2px solid #809766;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 25px;
+        width: 310px;
+        padding-right: 36px;
+      }
+    
+      .google-icon {
+        max-width: 25px;
+        position: relative;
+        vertical-align: bottom;
+        padding-right: 5px;
+      }
+
+      .facebook-login-btn {
+        background-color: #FFFFFF;
+        color:#0D0706;
+        border: 2px solid #809766;
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        margin: 15px;
+        width: 310px;
+      }
+    
+      .facebook-icon {
+        max-width: 25px;
+        position: relative;
+        vertical-align: bottom;
+        padding-right: 5px;
+      }
+
+      .create-account {
+        font-size: 18px;
+        margin: 20px;
+      }
+    
+      .create-account-link {
+        font-weight: bold;
+        color: #0D0706;
+      }
+  }
