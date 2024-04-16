@@ -1,0 +1,340 @@
+body {
+  margin: 0;
+  --background: #F8F5EE;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* global styles for buttons*/
+button {
+  border-radius: 5px;
+  padding: 0 20px;
+  height: 36px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color:#F8F5EE;
+  color: black; 
+  border: solid;
+}
+
+/*aktiv opgave */
+
+.h1-aktiv {
+  text-align: center; 
+  margin-top: 40px;
+}
+
+
+.container-aktivopgave {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: auto; 
+}
+
+.column-opgave {
+    text-align: center; 
+    width: 600px; 
+    padding: 20px; 
+}
+
+.item {
+    margin-bottom: 20px; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item button {
+    display: block;
+    margin-top: 20px; 
+}
+
+/* Popup when finish button is clicked */
+.finish-button {
+  background-color: green; 
+  color: white; 
+}
+
+.finish-button:hover {
+  border-color:#567533 ;
+}
+
+.info-button {
+  background-color: gray; 
+  color: black; 
+}
+
+img {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    max-height: none; 
+    object-fit: cover; 
+}
+
+/* side seperatoror */ 
+
+.separator {
+  height: 2px;
+  background-color: #ccc; 
+  margin: 20px 0; 
+}
+
+.section-title {
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+/* Opgaver naer mig */
+
+.container-opgavernaermig{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: auto; /
+}
+
+.column-opgaver {
+    text-align: center; 
+    width: 300px;
+    padding: 20px; 
+    border-radius: 8px; 
+    margin: 10px; 
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.container-opgavernaermig .item2 img {
+    width: 150px;
+    height: 150px;
+}
+
+.hjaelp {
+  background-color: #7e0e00;
+  color: white;
+  
+}
+.hjaelp:hover{
+  border-color: #7e0e00;
+}
+
+/* Pop ups when hjaelp button is clicked*/ 
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  
+  .close {
+    color: #7e0e00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    border-color: #7e0e00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .item2 h3 {
+    background-color: #809766;
+    padding: 5px; 
+    color: white;
+}
+  
+  .accept-button {
+    background-color: green; 
+    color: white; 
+}
+  .accept-button:hover{
+    border-color:#6b864d ;
+
+}
+   .nejtak-button {
+    background-color: #c4c0b8; 
+    color:black; 
+}
+ 
+/* pop up when finished */ 
+
+  #uploadModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+  #uploadModal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+}
+
+   #uploadModal h2,
+   #uploadModal input[type="file"] {
+    margin-bottom: 20px;
+}
+
+   .upload {
+    background-color: #41631a;
+    color: white; 
+}
+  .upload:hover{
+    border-color: #6b864d;
+  }
+
+.cancel {
+  background-color:#D92D20; 
+  color: white; 
+  margin-left: 25px;
+}
+
+.cancel:hover{
+  border-color:#D92D20
+}
+
+/* pop up when upload button is clicked */
+
+#confirmationModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#confirmationModal .modal-content {
+  background-color: white;
+  margin: auto; 
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  height: 80%; 
+  text-align: center;
+}
+
+#confirmationModal .close {
+  background-color: #D92D20;
+  color: white;
+  position: absolute;
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#confirmationModal h2 {
+  margin-top: 0;
+}
+
+#confirmationModal p {
+  margin-bottom: 20px;
+}
+
+/* animation */
+
+@keyframes revealText {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+.modal-content p {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: revealText 1s ease-out forwards;
+}
+.modal-content img {
+  animation: fadeIn 2s ease; 
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 2;
+  }
+}
+
+/* Styles for desktop version */ 
+  
+  @media screen and (min-width: 1024px) {
+    .container-opgavernaermig-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .container-opgavernaermig .column-opgaver {
+      margin: 60px; 
+      height: 400px;
+    }
+    .modal-content {
+      width: 40%;
+  }
+     #uploadModal .modal-content {
+      width: 40%;
+}
+     #confirmationModal .modal-content {
+  width: 35%; 
+  height: auto; 
+}
+     p {
+      font-size: 15px;
+}
+  }
+  
+
+
+  
+
+
+
+
+
+
+
+  
