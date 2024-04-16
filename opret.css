@@ -148,6 +148,11 @@ header {
     color: var(--txt-color2);
   }
 
+  .links{
+    text-decoration: none;
+    color: var(--txt-color);
+  }
+
 /*desktop*/
 @media only screen and (min-width: 901px) {
 
