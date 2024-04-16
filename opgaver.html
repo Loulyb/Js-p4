@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyrenses SOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-TpC+rdJLr9R82plF9vEaP5ZKpYkKTVdPwHl5+8SZ+OwBfMvm2DGfHpfh6lPJqSoI" crossorigin="anonymous">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="opgaver.css">
+</head>
+<body>
+    <div class="navbar">
+        <label class="hamburger-menu">
+            <input type="checkbox">
+        </label>
+        <aside class="sidebar">
+            <nav>
+                <div><a href="#" class="link">Min Profil</a></div>
+                <div><a href="#" class="link">Opgaver</a></div>
+                <div><a href="#" class="link">Mine Point</a></div>
+                <div><a href="#" class="link">Hændelser</a></div>
+                <div><a href="#" class="link">Kurser</a></div>
+                <div><a href="#" class="link">Førstehjælps kit</a></div>
+                <div><a href="#" class="link">Om os</a></div>
+                <div><a href="#" class="logud">Log ud</a></div>
+            </nav>
+        </aside>
+    </div>
+    <div class="h1-aktiv">
+        <h1 class="h1-aktiv">Aktiv opgave</h1>
+    </div>    
+<div class="container-aktivopgave">
+    <div class="column-opgave">
+        <div class="item">
+            <img src="billedeopgaver/google_maps .png" alt="maps-billede">
+            <h2>Kat påkørt</h2>
+            <p>Distance: 2,5 KM</p>
+            <button class="finish-button">Færdiggør</button>
+            <button class="info-button">Info</button>
+        </div>
+    </div>
+</div>
+    <div class="separator"></div>
+    <h2 class="section-title">Opgaver nær mig</h2> 
+<div class="container-opgavernaermig-wrapper">
+    <div class="container-opgavernaermig">
+        <div class="column-opgaver">
+            <div class="item2">
+                <img src="billedeopgaver/holckenhavn_parking.png" alt="billeder-map">
+                <h2>Svane brækket vinge</h2>
+                <h3>Distance: 4,4 KM</h3>
+                <p>Adresse: Holckenhavn 5800 Nyborg</p>
+                <div class="hjaelp-buttons">
+                    <button class="hjaelp">Hjælp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-opgavernaermig">
+        <div class="column-opgaver">
+            <div class="item2">
+                <img src="billedeopgaver/sejrsskovej_28.png" alt="Image">
+                <h2>Indfangning af brevdue</h2>
+                <h3>Distance:13,4 KM</h3>
+                <p>Sejerskovsvej 28 500 Odense</p>
+                <div class="hjaelp-buttons">
+                    <button class="hjaelp">Hjælp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-opgavernaermig">
+        <div class="column-opgaver">
+            <div class="item2">
+                <img src="billedeopgaver/tommerup_77.png" alt="Image">
+                <h2>Hund påkørt</h2>
+                <h3>Distance: 20,5 KM</h3>
+                <p>Tommerup 77 5690 Assens</p>
+                <div class="hjaelp-buttons">
+                   <button class="hjaelp">Hjælp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="billedeopgaver/holckenhavn_parking.png" alt="Image-modal">
+        <h2 id="modalTitle">Titel</h2>
+        <p id="modalDescription">beskrivelse</p>
+        <div class="modal-buttons">
+            <button class="modal-button accept-button">Accepter opgave</button>
+            <button class="modal-button nejtak-button">Nej tak</button>
+        </div>
+    </div>
+</div>
+<div id="uploadModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Upload Billede</h2>
+        <input type="file" id="pictureInput">
+        <div class="modal-buttons">
+            <button class="modal-button upload">Upload</button>
+            <button class="modal-button cancel"><span class="phone-icon">&#9742;</span> Anuller ring 1812</button>
+        </div>
+    </div>
+</div>
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+        <h2>Tak for din indsats!</h2>
+        <p>Point:120+</p>
+        <img src="billedeopgaver/logoooooo.jpg" alt="Image Description">
+        <button class="modal-button close">Close</button>
+    </div>
+</div>
+  <script src="opgaver.js"></script>
+</body>
+</html>
