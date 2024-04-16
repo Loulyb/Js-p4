@@ -1,0 +1,630 @@
+*,
+*::after{
+width: auto;
+}
+
+*::before {
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #7e0e00;
+  --background: #F8F5EE;
+  --button-color:#F04438;
+  --txt-color:#F8F5EE;
+  --txt-color2:#0D0706;
+  --hover-navbar:#d92d20; 
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --fontbold:"Poppins", sans-serif;
+}
+
+
+/*Mobile*/
+@media only screen and (max-width: 600px) {
+  body{
+    background-color: var(--background);
+  }
+  .navbar{
+    position: relative;
+    height: 80px;
+    z-index: 50;
+  }
+  .hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu:has(input:checked) {
+    --foreground: white;
+    --background: #333;
+  }
+  
+  .hamburger-menu:has(input:focus-visible)::before,
+  .hamburger-menu:has(input:focus-visible)::after,
+  .hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+  }
+  
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu input {
+      content: "";
+      width: var(--bar-width);
+      height: var(--bar-height);
+      background-color: var(--txt-color2); /* Stregerne er sorte*/ 
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+  }
+  
+  .hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+  }
+  
+  .hamburger-menu:has(input:checked)::before {
+      rotate: 45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / -2);
+      background-color: var(--txt-color); /* Krydset er hvidt*/ 
+    }
+  
+  
+  .hamburger-menu:has(input:checked)::after {
+      rotate: -45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / 2);
+      background-color: var(--txt-color); /* Krydset er hvidt*/ 
+  }
+  
+  .hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+  }
+  
+  .sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 20rem;
+    min-height: 100vh;
+  }
+  
+  .hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+  }
+  
+  a{
+      text-decoration: none ;
+      color: var(--txt-color);
+      font-family: var(--fontbold);
+      font-size: 23px;
+      padding: 20px;
+      Margin: 20px 10px;
+     
+  }
+  a:hover{
+  background-color:var(--hover-navbar) ;
+  padding: 5px;
+  margin: 5px;
+  }
+  .logud {
+      position: absolute;
+      bottom: 0;
+      color: var(--txt-color); 
+      font-family: var(--fontbold); 
+      font-size: 23px; 
+      padding: 10px;
+      margin: 10px;
+      align-items: flex-end;
+  }
+}
+/*filter*/
+.box {
+  display: none; /* Start med at skjule alle box-elementer */
+}
+
+.btn{
+  padding: 5px;
+  left: 5px;
+  border-radius: 3px;
+  font-family: var(--fontbold);
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 6px 10px;
+  background-color: var(--foreground);
+  color: var(--txt-color);
+  cursor: pointer;
+}
+
+.show{
+  display: block; /* Vis elementer med klassen show */
+}
+
+.btn:hover{
+  background-color: var(--hover-navbar);
+}
+.box{
+  display: none;
+}
+.animal {
+  position: relative; /* Sørg for, at .animal-container er positioneret relativt */
+}
+
+.pin {
+  position: absolute; /* Positioner pin-billederne absolut inden for .animal-container */
+  z-index: 1; /* Sørg for, at pin-billederne er foran kortet */
+  top: 25px;
+  left:150px;
+}
+.pin-1{
+  position: absolute;
+  z-index: 1;
+  top: 55px;
+  left: 400px;
+}
+.pin-2{
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 300px;
+ 
+}
+.pin-3{
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 250px;
+}
+.pin-4{
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 125px;
+}
+.pin-5{
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 325px;
+}
+.pin-6{
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  left: 35px;
+}
+.pin-7{
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 150px;
+}
+.pin-8{
+  position: absolute;
+  z-index: 1;
+  top: 85px;
+  left: 200px;
+  
+}
+.pin-9{
+  position: absolute;
+  z-index: 1;
+  top: 160px;
+  left: 258px;
+}
+img.map {
+  position: relative; /* Sørg for, at kortet er positioneret relativt */
+  z-index: 0; /* Sørg for, at kortet er bagved pin-billederne */
+  width: 100%; /* Tilpas bredden til 100% af forælderens bredde */
+  height: auto; /* Automatisk højde for at bevare billedets proportioner */
+}
+
+
+    /*tablet version*/
+@media only screen and (min-width: 601px) {
+  
+  body{
+    background-color: var(--background);
+  }
+  .navbar{
+    position: relative;
+    height: 80px;
+    z-index: 50;
+  }
+  .hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu:has(input:checked) {
+    --foreground: white;
+    --background: #333;
+  }
+  
+  .hamburger-menu:has(input:focus-visible)::before,
+  .hamburger-menu:has(input:focus-visible)::after,
+  .hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+  }
+  
+  .hamburger-menu::before,
+  .hamburger-menu::after,
+  .hamburger-menu input {
+      content: "";
+      width: var(--bar-width);
+      height: var(--bar-height);
+      background-color: var(--txt-color2); /* Stregerne er sorte*/ 
+      border-radius: 9999px;
+      transform-origin: left center;
+      transition: opacity var(--animation-timing), width var(--animation-timing),
+        rotate var(--animation-timing), translate var(--animation-timing),
+        background-color var(--animation-timing);
+  }
+  
+  .hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+  }
+  
+  .hamburger-menu:has(input:checked)::before {
+      rotate: 45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / -2);
+      background-color: var(--txt-color); /* Krydset er hvidt*/ 
+    }
+  
+  
+  .hamburger-menu:has(input:checked)::after {
+      rotate: -45deg;
+      width: var(--x-width);
+      translate: 0 calc(var(--bar-height) / 2);
+      background-color: var(--txt-color); /* Krydset er hvidt*/ 
+  }
+  
+  .hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+  }
+  
+  .sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 20rem;
+    min-height: 100vh;
+  }
+  
+  .hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+  }
+  
+  a{
+      text-decoration: none ;
+      color: var(--txt-color);
+      font-family: var(--fontbold);
+      font-size: 23px;
+      padding: 20px;
+      Margin: 20px 10px;
+     
+  }
+  a:hover{
+  background-color:var(--hover-navbar) ;
+  padding: 5px;
+  margin: 5px;
+  }
+  .logud {
+      position: absolute;
+      bottom: 0;
+      color: var(--txt-color); 
+      font-family: var(--fontbold); 
+      font-size: 23px; 
+      padding: 10px;
+      margin: 10px;
+      align-items: flex-end;
+  }
+}
+  .box {
+    display: none; /* Start med at skjule alle box-elementer */
+  }
+  
+  .btn{
+    padding: 5px;
+    border-radius: 3px;
+    font-family: var(--fontbold);
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 6px 10px;
+    background-color: var(--foreground);
+    color: var(--txt-color);
+    cursor: pointer;
+  }
+  
+  .show{
+    display: block; /* Vis elementer med klassen show */
+  }
+  
+  .btn:hover{
+    background-color: var(--hover-navbar);
+  }
+  .box{
+    display: none;
+  }
+  .animal {
+    position: relative; /* Sørg for, at .animal-container er positioneret relativt */
+  }
+  
+  .pin {
+    position: absolute; /* Positioner pin-billederne absolut inden for .animal-container */
+    z-index: 1; /* Sørg for, at pin-billederne er foran kortet */
+    top: 25px;
+    left:150px;
+  }
+  .pin-1{
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+    left: 400px;
+  }
+  .pin-2{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 300px;
+   
+  }
+  .pin-3{
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 250px;
+  }
+  .pin-4{
+    position: absolute;
+    z-index: 1;
+    top: 90px;
+    left: 125px;
+  }
+  .pin-5{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 325px;
+  }
+  .pin-6{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 35px;
+  }
+  .pin-7{
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 150px;
+  }
+  .pin-8{
+    position: absolute;
+    z-index: 1;
+    top: 85px;
+    left: 200px;
+    
+  }
+  .pin-9{
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    left: 258px;
+  }
+  img.map {
+    position: relative; /* Sørg for, at kortet er positioneret relativt */
+    z-index: 0; /* Sørg for, at kortet er bagved pin-billederne */
+    width: 100%; /* Tilpas bredden til 100% af forælderens bredde */
+    height: auto; /* Automatisk højde for at bevare billedets proportioner */
+  }
+  
+  /*desktop*/
+@media only screen and (min-width: 901px) {
+  body{
+    background-color: var(--background)
+  }
+  .hamburger-menu {
+    display: none;
+  }
+
+  .sidebar {
+    translate: 0;
+    transition: none;
+    padding: 18px;
+    max-width: none;
+    min-height: auto;
+    background-color: var(--foreground);
+    
+  }
+
+  .sidebar nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .sidebar a,
+  .sidebar a {
+    text-decoration: none;
+    position: inherit;
+    margin: 0;
+    padding: 18px;
+    color: var(--txt-color);
+    font-family: var(--fontbold);
+  }
+  a:hover{
+    background-color: var(--hover-navbar);
+  }
+  .filter{
+    background-color: var(--foreground);
+    color: var(--txt-color);
+    border: radius 3px; ; 
+    font-family: var(--fontbold);
+    font-size: 15px;
+    padding: 10px;
+  }
+  ul, li{
+    display: none;
+    list-style: none;
+    background-color: var(--foreground);
+    color: var(--txt-color);
+  }
+  
+  .btn{
+    background-color: var(--button-color);
+    color: var(--txt-color);
+    padding: 10px;
+    font-family: var(--fontbold);
+    font-size: 18px;
+  }
+  .box {
+    display: none; /* Start med at skjule alle box-elementer */
+  }
+  
+  .btn{
+    padding: 5px;
+    border-radius: 3px;
+    font-family: var(--fontbold);
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 6px 10px;
+    background-color: var(--foreground);
+    color: var(--txt-color);
+    cursor: pointer;
+  }
+  
+  .show{
+    display: block; /* Vis elementer med klassen show */
+  }
+  
+  .btn:hover{
+    background-color: var(--hover-navbar);
+  }
+  .box{
+    display: none;
+  }
+  .animal {
+    position: relative; /* Sørg for, at .animal-container er positioneret relativt */
+  }
+  
+  .pin {
+    position: absolute; /* Positioner pin-billederne absolut inden for .animal-container */
+    z-index: 1; /* Sørg for, at pin-billederne er foran kortet */
+    top: 25px;
+    left:600px;
+  }
+  .pin-1{
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+    left: 400px;
+  }
+  .pin-2{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 600px;
+   
+  }
+  .pin-3{
+    position: absolute;
+    z-index: 1;
+    top: 550px;
+    left: 650px;
+  }
+  .pin-4{
+    position: absolute;
+    z-index: 1;
+    top: 450px;
+    left: 150px;
+  }
+  .pin-5{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 325px;
+  }
+  .pin-6{
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 35px;
+  }
+  .pin-7{
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    left: 800px;
+  }
+  .pin-8{
+    position: absolute;
+    z-index: 1;
+    top: 85px;
+    left: 200px;
+    
+  }
+  .pin-9{
+    position: absolute;
+    z-index: 1;
+    top: 360px;
+    left: 758px;
+  }
+  img.map {
+    position: relative; /* Sørg for, at kortet er positioneret relativt */
+    z-index: 0; /* Sørg for, at kortet er bagved pin-billederne */
+    width: 100%; /* Tilpas bredden til 100% af forælderens bredde */
+    height: auto; /* Automatisk højde for at bevare billedets proportioner */
+  }
+}
