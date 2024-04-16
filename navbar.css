@@ -26,6 +26,10 @@ body {
 
 /*Mobile*/
 @media only screen and (max-width: 600px) {
+  .navbar{
+    position: relative;
+    height: 20px;
+  }
     .hamburger-menu {
         --x-width: calc(var(--hamburger-height) * 1.41421356237);
       
