@@ -9,6 +9,15 @@ p {
   font-weight: bold;
 }
 
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(fonts/Poppins-Bold.ttf);
+}
+
+h1, h2{
+  font-family: Poppins-Bold;
+}
+
 /* global styles for buttons*/
 button {
   border-radius: 5px;
@@ -221,7 +230,6 @@ img {
 .cancel {
   background-color:#D92D20; 
   color: white; 
-  margin-left: 25px;
 }
 
 .cancel:hover{
