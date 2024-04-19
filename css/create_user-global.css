@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* CSS dokument */
+
+:root {
+    /* font sizes */
+    --body-xs-size: 13px;
+    --body-sm-size: 14px;
+    --body-md-size: 16px;
+    --btn-txt-size: 14px;
+    --label-md: 16px;
+
+    /* Colors */
+    --color-bg-brand-section: #7e0e00;
+    --color-bg-primary: #f8f5ee;
+    --color-bg-white: #FDFBF9;
+    --color-fg-brand-secondary: #2c5200;
+    --color-border-white: #fdfbf9;
+    --color-border-primary: #93908a;
+    --color-text-primary: #0d0706;
+    --color-text-secondary: #494845;
+    --color-text-primary_on-brand: #FDFBF9;
+
+    /* Spacing */
+    --spacing-5xl: 56px;
+    --spacing-4xl: 48px;
+    --spacing-3xl: 40px;
+    --spacing-2xl: 32px;
+    --spacing-xl: 24px;
+    --spacing-lg: 16px;
+    --spacing-md: 8px;
+    --spacing-sm: 4px;
+
+    /* Radius */
+    --radius-full: 9999px;
+
+    /* Effects */
+    --shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    --shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+        0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+
+    /* Dimensions */
+    --logo-lg: 96px;
+}
+
+* {
+    /* allows us to include the padding and border in an element's total width and height */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+}
+
+html, body { height: 100%; }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+}
+
+h1 {
+    font-size: 48px;
+}
+h2 { font-size: 40px; }
+h3 { font-size: 33px; }
+h4 { font-size: 28px; }
+h5 { font-size: 23px; }
+h6 { font-size: 19px; }
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 150%;
+    color: var(--color-text-secondary);
+    width: 100%;
+}
+
+a {
+    color: var(--color-bg-brand-sectiontext-brand-secondary);
+    font-weight: 700;
+}
+
+.body-xs {
+    font-size: var(--body-xs-size);
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.btn-primary, .btn-social {
+    align-self: stretch;
+    display: flex;
+    box-shadow: var(--shadow-xs);
+    justify-content: center;
+    cursor: pointer;
+
+    /* Button text styling */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: var(--btn-txt-size);
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+}
+
+.btn-primary {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background-color: var(--color-fg-brand-secondary);
+    border: 1px solid var(--color-fg-brand-secondary);
+    color: var(--color-text-primary_on-brand);
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    /* Layout */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    position: relative;
+
+    /* Style */
+    background: var(--color-bg-brand-section);
+    padding: 56px var(--spacing-lg) var(--spacing-2xl) var(--spacing-lg);
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    align-self: stretch;
+}
+
+.on-top { z-index: 1; }
+
+.logo {
+    /* Layout */
+    display: flex;
+    width: var(--logo-lg);
+    height: var(--logo-lg);
+    padding: var(--spacing-sm);
+    align-items: center;
+    flex-shrink: 0;
+
+    /* Style */
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+}
+
+.logo-red {
+    background: var(--color-bg-white);
+}
+
+.form-box {
+    /* Layout */
+    display: flex;
+    flex-grow: 1;
+    padding: var(--spacing-lg);
+    margin-top: -48px;
+    margin-bottom: 0px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-shrink: 0;
+
+    /* Style */
+    border: 6px solid var(--color-border-white);
+    background: var(--color-bg-primary);
+    box-shadow: var(--shadow-md);
+}
+
+.top-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.base-icon {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.icon-arrow_left-hide {opacity: 0%;}
+
+.icon-close-show {opacity: 100%;}

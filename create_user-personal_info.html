@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="content">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opret bruger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/create_user-global.css">
+    <link rel="stylesheet" type="text/css" href="css/create_user.css">
+</head>
+<body>
+    <main>
+        <div class="container-center on-top">
+            <div class="logo-red logo">
+                <img class="responsive-img" src="billeder/logo-red.png" />
+            </div>
+        </div>
+        <div class="form-box">
+            <div>
+                <div class="top-icons">
+                  <img class="base-icon icon-arrow_left-hide" src="billeder/base_icons/arrow-left.svg" />
+                  <img class="base-icon icon-close-show" src="billeder/base_icons/close.svg" />
+                </div>
+                <h1 class="txt-center">Opret konto</h1>
+            </div>
+            <div class="container">
+                <form action="" method="post">
+                    <label for="address">Vejnavn* (eventuelt etage, dør)</label>
+                    <input
+                        id="address"
+                        type="text"
+                        name="street-address" 
+                        autocomplete="street-address"
+                        required
+                    >
+                    <div id="zip-city">
+                        <div>
+                            <label for="postal-code">Postnummer*</label>
+                            <input
+                                id="postal-code"
+                                type="number"
+                                name="postal-code"
+                                pattern="[0-9]{4}"
+                                autocomplete="postal-code"
+                            >
+                        </div>
+                        <div>
+                            <label for="city">By*</label>
+                            <input
+                                id="city"
+                                type="text"
+                                name="city"
+                                autocomplete="address-level2"
+                                required 
+                            >
+                        </div>
+                    </div>
+                    <label for="telefon">Telefon*</label>
+                    <input
+                        id="telefon"
+                        type="tel"
+                        name="telefon"
+                        pattern="[0-9]{8}"
+                        required
+                    >
+                    <label for="birthday">Fødselsdag</label>
+                    <input 
+                        type="date" 
+                        id="birthday" 
+                        name="birthday">
+                </form>
+            </div>
+            <div class="container">
+                <button type="button" class="btn-primary" onclick="window.location.href='preferences.html';">
+                    Opret konto
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="dk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="content">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Præferencer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/create_user-global.css">
+    <link rel="stylesheet" type="text/css" href="css/preferences.css">
+</head>
+<body>
+    <main>
+        <div class="container-center on-top">
+            <div class="logo-red logo">
+                <img class="responsive-img" src="billeder/logo-red.png" />
+            </div>
+        </div>
+        <div class="form-box">
+            <div>
+                <div class="top-icons">
+                  <img class="base-icon icon-arrow_left-hide" src="billeder/base_icons/arrow-left.svg" />
+                  <img class="base-icon icon-close-show" src="billeder/base_icons/close.svg" />
+                </div>
+                <h1 class="txt-center">Præferencer</h1>
+                <p class="txt-center">Vælg de ting du kan og vil hjælpe med.</p>
+            </div>
+            <div class="container">
+                <table id="tblassignments">
+                    <tr>
+                        <td>
+                            <label class="label-bold" for="tblassignments">Opgaver</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="firstaid" type="checkbox" value="Førstehjælp"/>
+                            <label class="label" for="firstaid">Førstehjælp</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="animalambulance" type="checkbox" value="Dyreambulance"/>
+                            <label class="label" for="animalambulance">Dyreambulance</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="catchanimal" type="checkbox" value="Indfangning af dyr"/>
+                            <label class="label" for="catchanimal">Indfangning af dyr</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="hunt" type="checkbox" value="Jagt af påkørt vildt"/>
+                            <label class="label" for="hunt">Jagt af påkørt vildt</label>
+                        </td>
+                    </tr>
+                </table>
+                <table id="tblassignments">
+                    <tr>
+                        <td>
+                            <label class="label-bold" for="tblassignments">Dyr du ikke vil hjælpe med</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="dog" type="checkbox" value="Hund"/>
+                            <label class="label" for="dog">Hund</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="cat" type="checkbox" value="Kat"/>
+                            <label class="label" for="cat">Kat</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="rabbit" type="checkbox" value="Kanin"/>
+                            <label class="label" for="rabbit">Kanin</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="bird" type="checkbox" value="Fugl"/>
+                            <label class="label" for="bird">Fugl</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="wild" type="checkbox" value="Vildt"/>
+                            <label class="label" for="wild">Vildt</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="container">
+                <input type="button" class="btn-primary" value="Gem og Afslut" onclick = "GetSelected()" />
+            </div>
+        </div>
+    </main>
+</body>
+</html>

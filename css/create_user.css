@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* CSS dokument */
+
+form {width: 100%;}
+
+label {
+    color: var(--Color-text-primary);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--label-md);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 150%;
+}
+
+input[type=text], [type=tel], [type=email], [type=password], [type=number], [type=date] {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--color-border-primary);
+    background-color: var(--color-bg-white);
+    color: var(--Color-text-primary);
+
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--body-md-size);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 150%;  
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 53.3%;
+    right: var(--spacing-5xl);
+    transform: translateY(-53.3%);
+    cursor: pointer;
+}
+  
+.password-toggle-icon i {
+    font-size: 20px;
+    line-height: 1;
+    color: var(--color-text-secondary);
+    transition: color 0.3s ease-in-out;
+}
+
+.txt-divider {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    font-size: var(--body-sm-size);
+
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 150%;
+    color: var(--color-text-secondary);
+}
+  
+.txt-divider::before, .txt-divider::after {
+    content: '';
+    flex-grow: 1;
+    padding: 1px;
+    background-color: var(--color-border-primary);
+    margin: 5px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    align-self: stretch;
+}
+
+.btn-social {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border-primary);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-sm) var(--spacing-xl);
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.btn-image {
+    width: var(--spacing-xl);
+    height: var(--spacing-xl);
+}
+
+#zip-city {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    align-self: stretch;
+}

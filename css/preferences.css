@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS dokument */
+
+.label-bold {
+    color: var(--Color-text-primary);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--label-md);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 150%;
+}
+
+.label {
+    color: var(--Color-text-primary);
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--label-md);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    line-height: 150%;
+}
