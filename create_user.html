@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/create_user-global.css">
     <link rel="stylesheet" type="text/css" href="css/create_user.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="scripts/create_user.js"></script>
+    <script src="scripts/create_user.js" defer></script>
 </head>
 <body>
     <main>
@@ -29,7 +29,7 @@
                 <h1 class="txt-center">Opret konto</h1>
             </div>
             <div class="container">
-                <form action="" method="post">
+                <form action="">
                     <label for="name">Dit navn*</label>
                     <input 
                         type="text" 
@@ -47,14 +47,16 @@
                         required
                     >
                     <label for="pass">Kodeord* (minimum 8 tegn)</label>
+                    <div class="password-toggle-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
                     <input 
                         type="password"
-                        id="password"
+                        id="pass"
                         name="password"
                         minlength="8"
                     required
                     >
-                    <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
                 </form>
                 <div class="txt-divider">Eller log ind med</div>
                 <section>

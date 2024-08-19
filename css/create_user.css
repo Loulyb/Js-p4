@@ -31,17 +31,16 @@ input[type=text], [type=tel], [type=email], [type=password], [type=number], [typ
     line-height: 150%;  
 }
 
-.password-toggle-icon {
+.container .password-toggle-icon {
     position: absolute;
-    top: 53.3%;
     right: var(--spacing-5xl);
-    transform: translateY(-53.3%);
     cursor: pointer;
 }
   
-.password-toggle-icon i {
+.container .password-toggle-icon i {
+    position: relative;
+    top: var(--spacing-md);
     font-size: 20px;
-    line-height: 1;
     color: var(--color-text-secondary);
     transition: color 0.3s ease-in-out;
 }
